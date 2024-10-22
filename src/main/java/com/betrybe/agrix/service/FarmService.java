@@ -3,10 +3,10 @@ package com.betrybe.agrix.service;
 import com.betrybe.agrix.model.Farm;
 import com.betrybe.agrix.repository.FarmRepository;
 import com.betrybe.agrix.service.interfaces.FarmServiceInterface;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 
 /**
  * The type Farm service.

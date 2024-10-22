@@ -1,7 +1,6 @@
 package com.betrybe.agrix.service.interfaces;
 
 import com.betrybe.agrix.model.Farm;
-
 import java.util.List;
 
 /**
