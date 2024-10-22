@@ -1,32 +1,37 @@
 package com.betrybe.agrix.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
- * Model class for Farm entity.
+ * Entity class for Farm.
  */
 @Entity
+@Table(name = "farms")
 public class Farm {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+    private Long id;
 
-  private String name;
-  private int size;
+  @Column(nullable = false)
+    private String name;
 
-  public Farm() {
-  }
+  @Column(nullable = false)
+    private double size;
 
-  public Farm(String name, int size) {
+  // Construtores, getters e setters
+  public Farm() {}
+
+  public Farm(String name, double size) {
     this.name = name;
     this.size = size;
   }
 
-  // Getters and Setters
   public Long getId() {
     return id;
   }
@@ -43,11 +48,11 @@ public class Farm {
     this.name = name;
   }
 
-  public int getSize() {
+  public double getSize() {
     return size;
   }
 
-  public void setSize(int size) {
+  public void setSize(double size) {
     this.size = size;
   }
 }
