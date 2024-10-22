@@ -1,7 +1,6 @@
 package com.betrybe.agrix.model;
 
-import com.betrybe.agrix.controller.dto.CropDTO;
-
+import com.betrybe.agrix.controller.dto.CropDto;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -33,14 +32,15 @@ public class Crop {
   private Farm farm;
 
   // Construtores, getters e setters
-  public Crop() {}
+  public Crop() {
+  }
 
   /**
    * Instantiates a new Crop.
    *
-   * @param name the name
+   * @param name        the name
    * @param plantedArea the planted area
-   * @param farm the farm
+   * @param farm        the farm
    */
   public Crop(String name, double plantedArea, Farm farm) {
     this.name = name;
@@ -83,9 +83,9 @@ public class Crop {
   /**
    * Converts the Crop entity to a DTO.
    *
-   * @return the CropDTO
+   * @return the CropDto
    */
-  public CropDTO toDTO() {
-    return new CropDTO(id, name, plantedArea, farm.getId());
+  public CropDto toDto() {
+    return new CropDto(id, name, plantedArea, farm.getId());
   }
 }

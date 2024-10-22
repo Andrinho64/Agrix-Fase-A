@@ -1,19 +1,22 @@
 package com.betrybe.agrix.controller;
 
-import com.betrybe.agrix.controller.dto.CreatedFarm;
 import com.betrybe.agrix.controller.dto.CreatedCrop;
-import com.betrybe.agrix.model.Farm;
+import com.betrybe.agrix.controller.dto.CreatedFarm;
 import com.betrybe.agrix.model.Crop;
-
-import com.betrybe.agrix.service.FarmService;
+import com.betrybe.agrix.model.Farm;
 import com.betrybe.agrix.service.CropService;
+import com.betrybe.agrix.service.FarmService;
+import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-import java.util.Optional;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * The type Farm controller.
@@ -73,7 +76,7 @@ public class FarmController {
       return ResponseEntity.ok(farm.get());
     } else {
       return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                .body("{ \"message\": \"Fazenda não encontrada!\" }");
+          .body("{ \"message\": \"Fazenda não encontrada!\" }");
     }
   }
 
@@ -81,18 +84,19 @@ public class FarmController {
    * Create crop response entity.
    *
    * @param farmId the farm id
-   * @param crop the crop
+   * @param crop   the crop
    * @return the response entity
    */
   @PostMapping("/{farmId}/crops")
-  public ResponseEntity<Object> createCrop(@PathVariable Long farmId, @RequestBody CreatedCrop crop) {
+  public ResponseEntity<Object> 
+      createCrop(@PathVariable Long farmId, @RequestBody CreatedCrop crop) {
     Optional<Farm> farm = farmService.getFarmById(farmId);
     if (farm.isPresent()) {
       Crop newCrop = cropService.saveCrop(crop.toEntity(farm.get()));
-      return ResponseEntity.status(HttpStatus.CREATED).body(newCrop.toDTO());
+      return ResponseEntity.status(HttpStatus.CREATED).body(newCrop.toDto());
     } else {
       return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                .body("{ \"message\": \"Fazenda não encontrada!\" }");
+          .body("{ \"message\": \"Fazenda não encontrada!\" }");
     }
   }
 }

@@ -3,7 +3,7 @@ package com.betrybe.agrix.controller.dto;
 /**
  * The type Crop DTO.
  */
-public class CropDTO {
+public class CropDto {
 
   private Long id;
   private String name;
@@ -13,12 +13,12 @@ public class CropDTO {
   /**
    * Instantiates a new Crop DTO.
    *
-   * @param id the id
-   * @param name the name
+   * @param id          the id
+   * @param name        the name
    * @param plantedArea the planted area
-   * @param farmId the farm id
+   * @param farmId      the farm id
    */
-  public CropDTO(Long id, String name, double plantedArea, Long farmId) {
+  public CropDto(Long id, String name, double plantedArea, Long farmId) {
     this.id = id;
     this.name = name;
     this.plantedArea = plantedArea;
