@@ -6,6 +6,8 @@ import com.betrybe.agrix.service.interfaces.FarmServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * The type Farm service.
  */
@@ -19,7 +21,6 @@ public class FarmService implements FarmServiceInterface {
    *
    * @param farmRepository the farm repository
    */
-
   @Autowired
   public FarmService(FarmRepository farmRepository) {
     this.farmRepository = farmRepository;
@@ -30,4 +31,8 @@ public class FarmService implements FarmServiceInterface {
     return farmRepository.save(farm);
   }
 
+  @Override
+  public List<Farm> getAllFarms() {
+    return farmRepository.findAll();
+  }
 }

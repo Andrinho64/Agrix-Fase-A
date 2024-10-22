@@ -6,10 +6,13 @@ import com.betrybe.agrix.service.FarmService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * The type Farm controller.
@@ -40,5 +43,16 @@ public class FarmController {
   public ResponseEntity<Farm> createFarm(@RequestBody CreatedFarm farm) {
     Farm newFarm = farmService.setFarmRepository(farm.toEntity());
     return ResponseEntity.status(HttpStatus.CREATED).body(newFarm);
+  }
+
+  /**
+   * Get all farms response entity.
+   *
+   * @return the response entity
+   */
+  @GetMapping
+  public ResponseEntity<List<Farm>> getAllFarms() {
+    List<Farm> farms = farmService.getAllFarms();
+    return ResponseEntity.ok(farms);
   }
 }
