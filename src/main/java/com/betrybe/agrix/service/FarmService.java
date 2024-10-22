@@ -4,6 +4,7 @@ import com.betrybe.agrix.model.Farm;
 import com.betrybe.agrix.repository.FarmRepository;
 import com.betrybe.agrix.service.interfaces.FarmServiceInterface;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -34,5 +35,10 @@ public class FarmService implements FarmServiceInterface {
   @Override
   public List<Farm> getAllFarms() {
     return farmRepository.findAll();
+  }
+
+  @Override
+  public Optional<Farm> getFarmById(Long id) {
+    return farmRepository.findById(id);
   }
 }
