@@ -2,33 +2,32 @@ package com.betrybe.agrix.service;
 
 import com.betrybe.agrix.model.Farm;
 import com.betrybe.agrix.repository.FarmRepository;
-import java.util.List;
-import java.util.Optional;
+import com.betrybe.agrix.service.interfaces.FarmServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
 /**
- * Service class for Farm entity.
+ * The type Farm service.
  */
 @Service
-public class FarmService {
+public class FarmService implements FarmServiceInterface {
+
+  private FarmRepository farmRepository;
+
+  /**
+   * Instantiates a new Farm service.
+   *
+   * @param farmRepository the farm repository
+   */
 
   @Autowired
-    private FarmRepository farmRepository;
-
-  // Método para obter todas as fazendas
-  public List<Farm> getAllFarms() {
-    return farmRepository.findAll();
+  public FarmService(FarmRepository farmRepository) {
+    this.farmRepository = farmRepository;
   }
 
-  // Método para obter uma fazenda por ID
-  public Optional<Farm> getFarmById(Long id) {
-    return farmRepository.findById(id);
-  }
-
-  // Método para salvar uma nova fazenda
-  public Farm saveFarm(Farm farm) {
+  @Override
+  public Farm setFarmRepository(Farm farm) {
     return farmRepository.save(farm);
   }
+
 }
