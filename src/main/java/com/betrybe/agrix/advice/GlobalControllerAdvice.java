@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 /**
- * The type Global controller advice.
+ * O tipo de conselho do controlador global.
  */
 @ControllerAdvice
 public class GlobalControllerAdvice {
 
   /**
-   * Handle exception response entity.
+   * Entidade - resposta de exceção.
    *
    * @param ex the ex
    * @return the response entity

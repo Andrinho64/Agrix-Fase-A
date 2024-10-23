@@ -1,12 +1,12 @@
 package com.betrybe.agrix.service.exception;
 
 /**
- * The type Farm not found exception.
+ * Exceção de uma fazenda não encontrada.
  */
 public class FarmNotFoundException extends NotFoundException {
 
   /**
-   * Instantiates a new Farm not found exception.
+   * Instancia - uma nova Fazenda não encontrada.
    */
   public FarmNotFoundException() {
     super("Fazenda não encontrada!");

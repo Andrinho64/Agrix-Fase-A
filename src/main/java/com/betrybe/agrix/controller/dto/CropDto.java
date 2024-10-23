@@ -1,7 +1,7 @@
 package com.betrybe.agrix.controller.dto;
 
 /**
- * The type Crop DTO.
+ * Tipo - Crop Dto.
  */
 public class CropDto {
 
@@ -11,7 +11,7 @@ public class CropDto {
   private Long farmId;
 
   /**
-   * Instantiates a new Crop DTO.
+   * Instancias de uma nova Crop Dto.
    *
    * @param id          the id
    * @param name        the name
@@ -25,7 +25,7 @@ public class CropDto {
     this.farmId = farmId;
   }
 
-  // Getters and setters
+  // Getters & setters
   public Long getId() {
     return id;
   }

@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
 public interface CropRepository extends JpaRepository<Crop, Long> {
 
   /**
-   * Find crops by farm id.
+   * Encontrar Crops pelo id - Fazenda.
    *
    * @param farmId the farm id
    * @return the list of crops

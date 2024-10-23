@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 /**
- * Repository interface for Farm entity.
+ * Interface de repositório - Fazenda.
  */
 @Repository
 public interface FarmRepository extends JpaRepository<Farm, Long> {

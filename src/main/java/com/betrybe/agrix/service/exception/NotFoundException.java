@@ -1,12 +1,12 @@
 package com.betrybe.agrix.service.exception;
 
 /**
- * The type Not found exception.
+ * Tipo não encontrado.
  */
 public class NotFoundException extends Exception {
 
   /**
-   * Instantiates a new Not found exception.
+   * Instancias não encontradas.
    *
    * @param message the message
    */

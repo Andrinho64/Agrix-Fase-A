@@ -4,12 +4,12 @@ import com.betrybe.agrix.model.Crop;
 import com.betrybe.agrix.model.Farm;
 
 /**
- * The type Creat crop.
+ * Tipo de criar Crop.
  */
 public record CreatCrop(String name, Double plantedArea) {
 
   /**
-   * To entity crop.
+   * Entidade Crop.
    *
    * @param farm the farm
    * @return the crop

@@ -43,7 +43,7 @@ public class FarmController {
   }
 
   /**
-   * Create farm response entity.
+   * Resposta de entidade ao criar fazenda.
    *
    * @param farm the farm
    * @return the response entity

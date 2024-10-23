@@ -3,12 +3,12 @@ package com.betrybe.agrix.controller.dto;
 import com.betrybe.agrix.model.Farm;
 
 /**
- * The type Created farm.
+ * Criar Fazenda.
  */
 public record CreatedFarm(String name, Double size) {
 
   /**
-   * To entity farm.
+   * Entidade - Fazenda.
    *
    * @return the farm
    */

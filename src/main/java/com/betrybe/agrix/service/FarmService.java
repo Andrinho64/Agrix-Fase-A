@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 
 
 /**
- * The type Farm service.
+ * Tipo de serviço de Fazenda.
  */
 @Service
 public class FarmService implements FarmServiceInterface {
@@ -18,7 +18,7 @@ public class FarmService implements FarmServiceInterface {
   private FarmRepository farmRepository;
 
   /**
-   * Instantiates a new Farm service.
+   * Instancias de novo serviço de fazenda.
    *
    * @param farmRepository the farm repository
    */

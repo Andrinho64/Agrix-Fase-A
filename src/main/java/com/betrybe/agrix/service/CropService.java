@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 
 /**
- * The type Crop service.
+ * Tipo - Crop service.
  */
 @Service
 public class CropService {
@@ -37,7 +37,7 @@ public class CropService {
   }
 
   /**
-   * Get crops by farm id.
+   * Pegar Crops pelo id Fazenda.
    *
    * @param farmId the farm id
    * @return the list of crops

@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * The type Crop controller.
+ * Type - Crop controller.
  */
 @RestController
 @RequestMapping(value = "/crops")
@@ -24,7 +24,7 @@ public class CropController {
   private CropService cropService;
 
   /**
-   * Instantiates a new Crop controller.
+   * Instancias - Nova Crop controller.
    *
    * @param cropService the crop service
    */
