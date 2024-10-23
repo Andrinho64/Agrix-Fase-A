@@ -44,4 +44,13 @@ public class CropService {
   public List<Crop> getCropsByFarmId(Long farmId) {
     return cropRepository.findByFarmId(farmId);
   }
+
+  /**
+   * Get all crops.
+   *
+   * @return the list of all crops
+   */
+  public List<Crop> getAllCrops() {
+    return cropRepository.findAll();
+  }
 }
