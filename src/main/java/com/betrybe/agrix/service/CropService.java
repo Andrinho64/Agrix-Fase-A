@@ -2,8 +2,10 @@ package com.betrybe.agrix.service;
 
 import com.betrybe.agrix.model.Crop;
 import com.betrybe.agrix.repository.CropRepository;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 
 /**
  * The type Crop service.
@@ -31,5 +33,15 @@ public class CropService {
    */
   public Crop saveCrop(Crop crop) {
     return cropRepository.save(crop);
+  }
+
+  /**
+   * Get crops by farm id.
+   *
+   * @param farmId the farm id
+   * @return the list of crops
+   */
+  public List<Crop> getCropsByFarmId(Long farmId) {
+    return cropRepository.findByFarmId(farmId);
   }
 }
